@@ -9,7 +9,6 @@ export default class VideoDetailItem extends React.Component {
         if (!this.props.video)
             return <div>Loading</div>
         this.url = `https://www.youtube.com/embed/${this.props.video.id.videoId}`
-        console.log('url: ', this.url);
         return (
             <div className="video-detail col-lg-8">
                 <div className="embed-responsive embed-responsive-16by9">

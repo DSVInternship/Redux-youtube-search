@@ -2,22 +2,16 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  context: path.join(__dirname, "src"),
-  devtool: 'eval',
+  devtool: 'inline-source-map',
   entry: [
-    './js/index'
+    './src/js/index'
   ],
 
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/public/'
+    filename: 'bundle.js'
+    // publicPath: '/public/'
   },
-
-  // plugins: [
-  //   new webpack.HotModuleReplacementPlugin(),
-  //   new webpack.NoErrorsPlugin()
-  // ],
 
   module: {
     loaders: [

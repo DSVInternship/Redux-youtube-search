@@ -11,7 +11,6 @@ export default class VideoList extends React.Component {
     }
 
     render() {
-        console.log('video-list: ', this.props.videos);
         const videoList = this.props.videos.map((video) => {
             return <VideoListItem onVideoSelect={this.props.onVideoSelect} key={video.etag} video={video}/>
         });
